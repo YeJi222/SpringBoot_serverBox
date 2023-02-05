@@ -31,7 +31,7 @@ public class TestController {
         return "Hello. " + name + "!";
     }
 
-    @GetMapping(value = "/member")
+    @PostMapping(value = "/member")
     public ResponseEntity<MemberDTO> getMember(
             @RequestBody MemberDTO memberDTO,
             @RequestParam String name,
