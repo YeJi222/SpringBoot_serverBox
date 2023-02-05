@@ -25,6 +25,12 @@ public class TestController {
         return "Hello. " + name + "!";
     }
 
+    @GetMapping(value = "/path-variable/{name}")
+    public String getTest3(@PathVariable String name){
+        LOGGER.info("getTest3 호출!");
+        return "Hello. " + name + "!";
+    }
+
     @GetMapping(value = "/member")
     public ResponseEntity<MemberDTO> getMember(
             @RequestBody MemberDTO memberDTO,
